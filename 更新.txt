@@ -1,0 +1,242 @@
+--%%%%%%把下面代码放进lua.txt里上传到空间
+
+--yuxuan制作
+--要崔子版权，垃圾布局
+--可以帮大家做UI,但不是白做
+--第一个版本更新UI。用于测试布局适配问题，请截图至群中，以便修改
+yuxuan={
+  LinearLayout,
+  orientation="vertical",
+  -- gravity="center";
+  id="dc",
+  {
+    --火箭
+    LinearLayout,
+    layout_height="20%h";
+    layout_width="80%w";
+    layout_gravity="center";
+    background="#00000000",
+    {
+      ImageView;
+      src="http://img02.sogoucdn.com/app/a/100520146/ef34be481529e4b355d2bd662464c1d4",
+      id="xhj";
+    };
+  },
+
+  {
+    CardView;
+    layout_height="50%h";
+    layout_width="80%w";
+    layout_marginTop="0%h";
+    layout_gravity="center";
+    id="card";
+    radius="5dp",
+
+
+    {
+      --卡片内容布局
+      LinearLayout,
+      orientation="vertical",
+      layout_width="fill",
+      layout_height="fill",
+      {
+        --卡片内容布局
+        LinearLayout,
+        orientation="vertical",
+        layout_height="8%h";
+        layout_width="80%w";
+        layout_marginTop="0%h";
+        layout_gravity="center";
+        {
+          ImageView;
+          src="http://img04.sogoucdn.com/app/a/100520146/2a2299d3cfa1f537dead8d99946c5987",
+          id="card_xbj";
+        };
+      },
+
+
+
+      --软件信息提示开始
+      {
+        LinearLayout,
+        layout_marginTop="0%h";
+        gravity="center";
+        layout_width="fill",
+        layout_height="5%h",
+        {
+          LinearLayout,
+          orientation="horizontal",
+          gravity="center|left";
+          layout_width="40%w",
+          layout_height="5%h",
+
+          {
+            TextView;
+            textSize="13sp";
+            layout_marginLeft="5%w";
+            textColor="#FF888888";
+            text="版 本 : ",
+          };
+          {
+            TextView;
+            text="v_1.5.0",
+            textSize="13sp";
+            textColor="#FF888888";
+            id="text1";
+          };
+        },
+
+        {
+          LinearLayout,
+          orientation="horizontal",
+          gravity="center|right";
+          layout_width="40%w",
+          layout_height="5%h",
+          {
+            TextView;
+            textSize="13sp";
+            textColor="#FF888888";
+            text="安装包大小: ",
+          };
+          {
+            TextView;
+            text="5.97M",
+            layout_marginRight="5%w";
+            textSize="13sp";
+            textColor="#FF888888";
+            id="text2";
+          };
+        },
+      },
+      --软件提示信息结束
+      {
+        LinearLayout,
+        gravity="center|left";
+        layout_width="80%w",
+        layout_height="5%h",
+        {
+          TextView;
+          textSize="18sp";
+          layout_marginLeft="5%w";
+          textColor="#FF3f3f3f";
+          text="发现新版本",
+          textStyle="bold",
+        };
+      },
+      {
+        LinearLayout,
+        gravity="left";
+        layout_width="80%w",
+        layout_height="20%h",
+        --background="#ff000000",
+        layout_marginTop="2%h";
+        {
+          TextView;
+          textSize="13sp";
+          layout_marginLeft="5%w";
+        --  layout_marginTop="1%h";
+          textColor="#FF808080";
+          text="1.修复bug\n\n2.优化谷歌账号登录\n\n3.长按可删除账号\n\n4.长按可删除账号\n\n5.长按可删除账号\n\n3.长按可删除账号",
+          textStyle="bold",
+
+        };
+      },
+
+      {
+        Button,
+        layout_width="50%w",
+        layout_height="7%h",
+        layout_marginTop="2%h";
+        layout_gravity="center";
+        text="立 即 升 级",
+        textSize="18sp";
+        textColor="#ffffff";
+        id="sj",
+      },
+
+    },--卡片内容布局结束
+  },--卡片布局结束
+  {
+    ImageView;
+    src="http://img02.sogoucdn.com/app/a/100520146/7585b51ba805303a3749c3fa6e425325",
+    layout_gravity="center";
+    layout_marginTop="3%h";
+    ColorFilter=0xFFffffff,
+    id="qx";
+  };
+
+}--布局结束
+
+
+--activity.setContentView(loadlayout(yuxuan))
+
+
+
+
+
+
+function 提示(内容)
+  toasts={
+    LinearLayout;
+    id="toastb";
+    {
+      TextView;
+      background="#ff109d58";
+      padding="8dp";
+      textSize="15sp";
+      TextColor="#ffffffff";
+      layout_width="100%w";
+      layout_height="50dp";
+      gravity="center";
+      text="提示出错";
+      id="text_ts";
+    };
+  };
+  local toast=Toast.makeText(activity,"内容",Toast.LENGTH_LONG).setView(loadlayout(toasts))
+  --  LENGTH_SHORT     2s
+  --LENGTH_LONG      3.5s
+  toast.setGravity(Gravity.BOTTOM,0, 0)
+  --Gravity.BOTTOM   底部
+  --  Gravity.CENTER   中部
+  --Gravity.TOP      顶部
+  text_ts.Text=tostring(内容)
+  toast.show()
+end
+--调用方法
+
+
+
+dialog= AlertDialog.Builder(this)
+import "android.text.SpannableString"
+import "android.text.style.ForegroundColorSpan"
+import "android.text.Spannable"
+dialog1=dialog.show()
+
+dialog1.getWindow().setContentView(loadlayout(yuxuan));
+
+import "android.graphics.drawable.ColorDrawable"
+dialog1.getWindow().setBackgroundDrawable(ColorDrawable(0x00000000));
+
+function CircleButton(view,radiu,InsideColor,半圆)
+  import "android.graphics.drawable.GradientDrawable"
+  drawable = GradientDrawable()
+  drawable.setShape(GradientDrawable.RECTANGLE)
+  drawable.setColor(InsideColor)
+  drawable.setCornerRadii({半圆,radiu,半圆,radiu,radiu,radiu,radiu,radiu});
+  view.setBackgroundDrawable(drawable)
+end
+CircleButton(sj,360,0xff109d58,360)
+
+
+sj.onClick=function(v)
+  dialog1.dismiss()
+ 下载文件("https://ghuitu.cn/fl_1.1.apk")
+end
+
+
+
+
+qx.onClick=function(v)
+  dialog1.dismiss()
+  退出程序()
+end
