@@ -229,8 +229,7 @@ CircleButton(sj,360,0xff109d58,360)
 
 
 sj.onClick=function(v)
-  dialog1.dismiss()
- 进入子页面("1")
+   加载网页(apk_url)
 end
 
 
