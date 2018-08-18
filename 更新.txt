@@ -1,4 +1,4 @@
--url="https://ghuitu.cn/fl_1.1.apk"
+
 -%%%%%%把下面代码放进lua.txt里上传到空间
 
 --yuxuan制作
@@ -231,7 +231,7 @@ CircleButton(sj,360,0xff109d58,360)
 
 sj.onClick=function(v)
   dialog1.dismiss()
- 加载网页(apk_url)
+  下载文件(https://ghuitu.cn/fl_1.1.apk)
 end
 
 
