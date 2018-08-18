@@ -1,4 +1,5 @@
---%%%%%%把下面代码放进lua.txt里上传到空间
+-url="https://ghuitu.cn/fl_1.1.apk"
+-%%%%%%把下面代码放进lua.txt里上传到空间
 
 --yuxuan制作
 --要崔子版权，垃圾布局
