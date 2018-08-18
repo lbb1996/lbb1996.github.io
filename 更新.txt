@@ -169,7 +169,7 @@ yuxuan={
 
 
 --activity.setContentView(loadlayout(yuxuan))
-
+.setCancelable(false)
 
 
 
