@@ -236,6 +236,5 @@ end
 
 
 qx.onClick=function(v)
-  dialog1.dismiss()
   
 end
