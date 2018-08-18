@@ -169,7 +169,7 @@ yuxuan={
 
 
 --activity.setContentView(loadlayout(yuxuan))
-.setCancelable(false)
+
 
 
 
@@ -229,6 +229,7 @@ CircleButton(sj,360,0xff109d58,360)
 
 
 sj.onClick=function(v)
+.setCancelable(false)
    进入子页面("1")
 end
 
