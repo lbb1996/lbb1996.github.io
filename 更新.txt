@@ -136,7 +136,7 @@ yuxuan={
           layout_marginLeft="5%w";
         --  layout_marginTop="1%h";
           textColor="#FF808080";
-          text="1.修复bug\n\n2.优化谷歌账号登录\n\n3.长按可删除账号\n\n4.长按可删除账号\n\n5.长按可删除账号\n\n3.长按可删除账号",
+          text="1.修复bug\n\n2.仿酷狗返回桌面提示\n\n3.长按可删除账号\n\n4.长按可删除账号\n\n5.长按可删除账号\n\n3.长按可删除账号",
           textStyle="bold",
 
         };
