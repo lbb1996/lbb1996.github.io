@@ -3,7 +3,7 @@ import qs from 'qs'
 
 // axios 配置
 axios.defaults.timeout = 10000;
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'http://music.163.com/api/search/get/web?csrf_token=';
 
 export function fetchGet(url, param) {
     return new Promise((resolve, reject) => {
