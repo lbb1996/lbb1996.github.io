@@ -1,10 +1,1162 @@
-��ͼƬ���ӡ�http://img03.sogoucdn.com/app/a/100520146/33fd352ba665c9d028f95e55e66d6903��ͼƬ���ӡ�
-����ַ���ӡ�http://m.kuwo.cn/newh5/playlist/2017/content?pid=1082685104����ַ���ӡ�
-��ͼƬ����һ��http://img01.sogoucdn.com/app/a/100520146/c02adfb0bee42c27386d336271530d50��ͼƬ����һ��
-����ַ����һ��https://m.v.qq.com/x/cover/6/639agzdh10yu2q2.html?ptag=����ַ����һ��
-��ͼƬ���Ӷ���http://img02.sogoucdn.com/app/a/100520146/dddecbc89c2ee786fb6c6ffd6f8cbbe8��ͼƬ���Ӷ���
-����ַ���Ӷ���https://m.v.qq.com/x/cover/3/3c06byuadecmz2r.html?vid=g0027fxm5k1&ptag=����ַ���Ӷ���
-��ͼƬ��������http://img04.sogoucdn.com/app/a/100520146/3ac1c860fc1597ed76396c7f9062786c��ͼƬ��������
-����ַ��������http://v.sm.cn/mobile/4.9.9/index.html?uc_param_str=frdnpfvecplabtbmntnwpvssbinipr#!/video/1744698?rec_type=!!channel_tab=recommended����ַ��������
-��������ɫ��#FFFF0000��������ɫ��
-���������ݡ�����ʱ���¹�桾�������ݡ�
+--程序启动时会执行的事件
+
+--程序启动时会执行的事件
+--把下面这段代码添加到程序启动里
+page=0
+
+function onKeyDown(key,event)
+  if(key==4)then
+    if(webView.canGoBack())then
+      webView.goBack()
+    else
+      --注意，与应用启动时执行的事件那还有个代码
+      --page变量和打开的page页仅做演示，可自行更改
+      --其实这是很简单的一个东西
+
+      page=page+1
+      --记录点击
+
+      if(page==2)then
+        --2为点击次数，可修改
+      退出确认=print"再按一次返回桌面";
+     print=function()
+       activity.moveTaskToBack(true)
+       end
+        page=0
+        --点击次数归零
+      end
+
+      --还可添加其它操作，如点击后需进行密码验证再进行操作
+
+    end
+    return true
+  end
+end
+
+--微视科技-小焜制作，没有版权，随便删除，删成了bug，我不管
+import "android.app.*"
+import "android.os.*"
+import "android.widget.*"
+import "android.view.*"
+import "android.graphics.Typeface"
+import "android.view.animation.AccelerateInterpolator"
+import "android.transition.ArcMotion"
+import "android.animation.AnimatorSet"
+import "android.animation.Animator$AnimatorListener"
+import "android.graphics.drawable.GradientDrawable"
+
+began={
+    RelativeLayout;
+    layout_height="fill";
+    layout_width="fill";
+    id="began_b";
+    {
+        LinearLayout;
+        orientation="vertical";
+        layout_height="fill";
+        layout_width="fill";
+        {
+            RelativeLayout;
+            layout_weight="1";
+            layout_height="-1";
+            background="https://ooo.0o0.ooo/2018/07/06/5b3f7ea1679cc.png";
+            id="top";
+            layout_width="-1";
+            };
+        {
+            RelativeLayout;
+            layout_weight="1";
+            layout_height="-1";
+            background="https://ooo.0o0.ooo/2018/07/06/5b3f7ea1679cc.png";
+            id="bottom";
+            layout_width="-1";
+            {
+                TextView;
+                layout_centerHorizontal="true";
+                textColor="#fffff";
+                id="t1";
+                textSize="20sp";
+                layout_marginTop="50dp";
+                };
+            {
+                TextView;
+                layout_centerHorizontal="true";
+                textColor="#fffff";
+                id="t2";
+                textSize="25sp";
+                layout_marginTop="100dp";
+                };
+            };
+        };
+    {
+        ImageView;
+        scaleType="fitCenter";
+        layout_height="55dp";
+        id="center";
+        layout_width="55dp";
+        layout_centerInParent="true";
+        src="http://img04.sogoucdn.com/app/a/100520146/bd6a279497631e9cf1db3db4a1ae3962";
+        };
+    };
+
+drawerLayout.getParent().addView(loadlayout(began))
+
+function CircleButton(view,InsideColor,radiu)
+  drawable = GradientDrawable() 
+  drawable.setShape(GradientDrawable.RECTANGLE) 
+  drawable.setColor(InsideColor)
+  drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});
+  view.setBackgroundDrawable(drawable)
+end
+--控件圆角 (控件id,颜色,角度)
+CircleButton(center,0xFF,360)
+--第一行文字
+t1.setText("Poetic Sound")
+ats = AnimatorSet()
+--文字动画(参考lua手册)
+scx=ObjectAnimator().ofFloat(t1,"scaleX",{0,1})
+scy=ObjectAnimator().ofFloat(t1,"scaleY",{0,1})
+tr=ObjectAnimator().ofFloat(t1, "Y",{1200,t1.getY()+120})
+alpha = ObjectAnimator().ofFloat(t1, "alpha", {0,1})
+--800是动画时间，毫秒
+ats.setDuration(1200)
+ats.setInterpolator(AccelerateInterpolator())
+ats.play(scx).with(scy).with(tr).with(alpha)
+ats.start()
+
+ats.addListener(AnimatorListener{
+onAnimationEnd=function(animation)
+--第二行文字
+t2.setText("正在进入,请稍后…")
+ats2 = AnimatorSet()
+scx2=ObjectAnimator().ofFloat(t2,"scaleX",{0,1})
+scy2=ObjectAnimator().ofFloat(t2,"scaleY",{0,1})
+tr2=ObjectAnimator().ofFloat(t2, "Y",{1200,t1.getY()+140})
+alpha2 = ObjectAnimator().ofFloat(t2, "alpha", {0,1})
+--动画时间
+ats2.setDuration(100)
+ats2.setInterpolator(AccelerateInterpolator())
+ats2.play(scx2).with(scy2).with(tr2).with(alpha2)
+ats2.start()
+
+ats2.addListener(AnimatorListener{
+onAnimationEnd=function(animation)
+phone=center
+set = AnimatorSet()
+anim = ObjectAnimator .ofFloat(phone, "rotation",{360,0})
+anim3 = ObjectAnimator .ofFloat(phone, "rotationX",{360,0})
+anim.setDuration(1000)
+anim3.setDuration(1000)
+set.play(anim).before(anim3)
+set.start()
+
+
+set.addListener(AnimatorListener{
+onAnimationEnd=function(animation)
+set2 = AnimatorSet()
+--结束动画 中间图标渐隐 上下拉开
+tr3=ObjectAnimator().ofFloat(top, "Y",{top.getY(),-2000})
+tr4=ObjectAnimator().ofFloat(bottom, "Y",{bottom.getY(),5000})
+al=ObjectAnimator().ofFloat(center, "alpha", {1,0})
+set2.setDuration(2000)
+set2.setInterpolator(AccelerateInterpolator())
+set2.play(tr3).with(tr4).with(al)
+set2.start()
+
+set2.addListener(AnimatorListener{
+onAnimationEnd=function(animation)
+--动画结束执行代码
+began_b.setVisibility(8)
+
+--由酷安@一个假币 基于@小乙天 修改、发布的登陆布局修改、制作
+进入子页面("登陆")
+--简单的vip账户系统
+import"bmob"
+b=bmob("d0ebde7dc677cc571934c4617fff4077","77fbdc9740e041860b7efcc290934293")
+--上面括号两个信息分别填bmob后端云申请得到的Application ID和API Key
+--[[--数据更新(更新余额示例)
+local d={}
+d.where={}
+d.where.user=activity.getSharedData("zh")
+b:query(biao,d,function(code,j)
+  if code~=-1 and code>=200 and code<400 then
+    local ss={}
+    ss.item="999"
+    b:update("vip",j.results[1].objectId,ss,function(ac,ac2)
+      if ac~=-1 and ac>=200 and ac<400 then
+        print("修改成功")
+      else
+        print("修改失败")
+      end
+    end)
+  end
+end)
+]]
+--[[--数据查询(查询头像示例）
+local d={}
+d.where={}
+d.where.user=activity.getSharedData("zh")
+b:query("vip",d,function(code,j)
+  if code~=-1 and code>=200 and code<400 then
+    local touxiang=j.results[1].header
+    if touxiang==nil then
+      local ss={}
+      ss.header=""
+      b:update("vip",j.results[1].objectId,ss,function(ac,ac2)end)
+      弹出消息("没有头像")
+    else
+      弹出消息(touxiang)
+    end
+  end
+end)
+]]
+
+--程序启动时会执行的事件
+
+-- By: QQ32552732
+
+task(function()
+  local stime=os.clock()
+  local result=import"check"({--检查的项目
+    "proxy",--检查网络代理，如抓包软件
+    "virtual",--检查虚拟环境，如“多开”软件（可能无效）
+    "emulator",--检查模拟器，如夜神模拟器
+    "xposed",--检查Xposed，如对话框取消模块
+    "root",--检查Root，如通过Root权限访问私有目录
+  })
+  print("安全检查完成，耗时: "..os.clock()-stime.."秒")
+  stime=nil
+  local unsafe={}
+  if result.proxy then table.insert(unsafe,"网络代理")end
+  if result.virtual then table.insert(unsafe,"虚拟环境")end
+  if result.emulator then table.insert(unsafe,"模拟器")end
+  if result.xposed then table.insert(unsafe,"Xposed")end
+  if result.root then table.insert(unsafe,"Root")end
+  return (next(unsafe)and unsafe)or nil
+end,function(unsafe)
+  if unsafe~=nil then
+    unsafe=luajava.astable(unsafe)
+    if next(unsafe) then
+      activity.setContentView(TextView(activity).setText("运行环境存在风险\
+应用程序无法运行\
+请清除风险后重试").setGravity(Gravity.CENTER))
+      AlertDialog.Builder(activity)
+      .setTitle("运行环境存在风险")
+      .setMessage("当前运行环境存在 "..table.concat(unsafe,"、").." 风险，应用程序无法运行，请清除风险后重新进入。")
+      .setPositiveButton("退出",{})
+      .setCancelable(false)
+      .setOnDismissListener({onDismiss=function()
+          activity.finish()
+        end})
+      .show()
+    end
+  end
+end)
+
+function 提示(内容)
+  Toast.makeText(this, 内容,Toast.LENGTH_SHORT).show()
+end
+
+function 检测更新(Github地址)
+  local dl=ProgressDialog.show(activity,nil,'更新检测中…')
+  dl.show()
+  local tt=Ticker()
+  tt.start()
+  packinfo=this.getPackageManager().getPackageInfo(this.getPackageName(),((1552294270/8/2-8392)/32/1250-25.25)/8-236)
+  version=tostring(packinfo.versionName)
+  versioncode=tostring(packinfo.versionCode)
+
+  url="https://ghuitu.cn/升级.txt";
+  function 过滤(content)
+    版本名=content:match("【版本名】(.-)【版本名】")
+    版本=content:match("【版本】(.-)【版本】")
+    内容=content:match("【内容】(.-)【内容】")
+    链接=content:match("【链接】(.-)【链接】")
+    if(版本名==nil) then
+      版本名="获取失败"
+    end
+    if(版本==nil) then
+      版本="0"
+    end
+    if(内容==nil) then
+      内容="获取失败"
+    end
+    if(链接==nil) then
+      提示("服务器参数配置错误，请过段时间再次尝试")
+    end
+
+    if(版本 > versioncode) then
+      dl.dismiss()
+      tt.stop() 
+      对话框()
+      .设置标题("检测到更新")
+      .setCancelable(false)
+      .设置消息("版本："..version.."→"..版本名.."\n更新内容："..内容)
+      .设置积极按钮("下载更新",function()
+        下载文件(链接)
+        提示("下载更新中…")
+      end)
+      
+      .显示()
+    else
+      dl.dismiss()
+      tt.stop()
+      提示("当前已是最新版本！")
+    end
+  end
+  Http.get(url,nil,"UTF-8",nil,function(code,content,cookie,header)
+    if(code==200 and content)then
+      过滤(content)
+    else
+      dl.dismiss()
+      tt.stop() 
+      提示("本地网络或服务器异常  "..code)
+    end
+  end)
+end
+
+检测更新("Github地址")
+
+
+  end
+});
+
+end,
+});
+
+end,
+});
+
+
+
+end,
+});
+
+
+
+
+import 'android.webkit.WebView'
+webView.addJavascriptInterface({},'JsInterface')
+
+sidebar2=(loadlayout(
+{
+LinearLayout;
+orientation="vertical"; 
+{
+LinearLayout;
+{
+TextView;
+id="shiyonggongneng";
+textColor="#333333";
+text="";
+
+};
+{
+TextView;
+textColor="#000000";
+};
+};
+drawerLayout.setScrimColor(0)
+
+}
+))
+
+
+
+sidebar.addView(sidebar2)
+sidebar2=(loadlayout(
+{
+LinearLayout;
+orientation="vertical";
+{
+LinearLayout;
+
+{
+TextView;
+id="kf";
+textColor="#000000";
+text="   夜间模式             ";
+};
+{
+Switch;
+id="kg";
+};
+};
+
+{
+TextView;
+textColor="#000000";
+};
+
+
+}
+))
+
+sidebar.addView(sidebar2)
+sidebar2=(loadlayout(
+{
+LinearLayout;
+orientation="vertical";
+{
+LinearLayout;
+
+{
+TextView;
+id="kh";
+textColor="#000000";
+text="   顶栏天气             ";
+};
+{
+Switch;
+id="ks";
+};
+};
+
+{
+TextView;
+textColor="#000000";
+};
+
+
+}
+))
+
+sidebar.addView(sidebar2)
+sidebar2=(loadlayout(
+{
+LinearLayout;
+orientation="vertical";
+{
+LinearLayout;
+
+{
+TextView;
+id="qq";
+textColor="#000000";
+text="   消息通知             ";
+};
+{
+Switch;
+id="qd";
+};
+};
+
+{
+TextView;
+textColor="#000000";
+};
+
+
+}
+))
+
+sidebar.addView(sidebar2)
+--开关绑定的工作
+function 开关保存(kg,wj,k,j)
+pref = this.getSharedPreferences("kg",0)
+kg.setChecked(pref.getBoolean(wj,false))
+if pref.getBoolean(wj,false) then
+  loadstring(k)()
+  else
+ loadstring(j)()
+  end
+editor=activity.getSharedPreferences("kg",0).edit()
+kg.setOnCheckedChangeListener{
+  onCheckedChanged=function(g,c)
+    if c then
+    loadstring(k)()
+    else 
+    loadstring(j)()
+    end
+  end}
+kg.onClick=function(v)
+  editor.putBoolean(wj,v.isChecked())
+  editor.commit()
+  end
+end
+
+开关保存(qd,"a1",[[
+ --远程推送通知栏消息
+require "import"
+import "android.app.*"
+import "android.os.*"
+import "android.widget.*"
+import "android.view.*"
+import "android.content.Context"
+import "android.content.Intent"
+import "android.app.PendingIntent"
+import "android.app.Notification"
+ urla="https://shimo.im/docs/VoBxncYwa7gZ4W7N"--换自己的远程链接
+ Http.get(urla,nil,nil,nil,function(code,content)
+  local 开关=content:match("【推送】(.-)【通知】")
+  local 标题=content:match("【标题】(.-)【标题】")
+  local 消息=content:match("【消息】(.-)【消息】")
+     if code==200  then
+       if 开关=="开" then 
+mBuilder =  Notification.Builder(this);
+mBuilder.setSmallIcon(R.drawable.icon)--设置图标
+mBuilder.setContentTitle(标题);--大标
+mBuilder.setContentText(消息);--小标
+mBuilder.setAutoCancel(true);--设置这个标志当用户单击面板就可以让通知将自动取消
+mBuilder.setDefaults( Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)  --使用默认震动
+notificationManager =activity.getSystemService(Context.NOTIFICATION_SERVICE)
+notificationIntent = Intent("android.intent.action.VIEW");
+notificationIntent.setClassName(this.getPackageName(),"com.androlua.Welcome")
+pendingIntent = PendingIntent.getActivity(activity.getApplicationContext(), 0, notificationIntent, Intent.FLAG_ACTIVITY_NEW_TASK);
+mBuilder.setContentIntent(pendingIntent).setAutoCancel(false)
+notificationManager.notify(1, mBuilder.build())      --发送通知
+--notificationManager.cancel(1);           --关闭通知
+--以上通知栏代码原创为柯南大佬。远程推送以及注释来自偶尔想吃榨菜
+       end
+      else
+      print"服务器出错"
+     end
+   end)]],[[]])
+开关保存(kg,"a1",[[webView.addView(loadlayout{
+    LinearLayout,
+    id="overla",
+    layout_width="fill",
+    layout_height=32552732*6,
+    orientation="vertical",
+    backgroundColor="#86000000",
+  })
+toolbarParent.addView(loadlayout{
+    LinearLayout,
+    id="overlay",
+    layout_width="fill",
+    layout_height=32552732*6,
+    orientation="vertical",
+    backgroundColor="#86000000",
+  })]],[[webView.removeView(overla)
+toolbarParent.removeView(overlay)]])
+
+
+
+开关保存(ks,"a1",[[--程序启动时会执行的事件
+
+-- Fusion App 顶栏天气
+-- By: QQ32552732
+-- QQ: 32552732 (废话)
+-- E-Mail: new-age@outlook.com
+-- 感谢凌默提供的服务器
+-- 不能保证100%稳定
+-- 正式使用建议关闭出现错误后的弹出消息
+-- 使用时注意工程下 drawable 有需要用到的天气图标 (均来自图标仓库)
+
+local wtrlay=loadlayout{
+  LinearLayout,
+  orientation="horizontal",
+  paddingLeft="10dp",
+  paddingRight="10dp",
+  {
+    ImageView,
+    id="wtricon",
+    layout_width="23dp",
+    layout_height="23dp",
+    scaleType="fitXY",
+    src="drawable/question_mark_circle.png"
+  },
+  {
+    TextView,
+    id="wtrtemp",
+    layout_marginLeft="10dp",
+    text="-273.15",
+    textSize="15sp",
+    textColor="#FFFFFFFF",
+  },
+  {
+    TextView,
+    layout_marginLeft="2dp",
+    textSize="10sp",
+    textColor="#FFFFFFFF",
+    text="℃",
+  },
+}
+toolbar.addView(wtrlay,2)
+wtrlay.layoutParams.gravity=Gravity.CENTER
+--JDPUK--
+Http.get("http://0.funtimes.top/api/wtr.php?type=live&format=text&from=fusionapp_"..activity.getPackageName().."_"..init.appname.."_"..init.packagename,nil,"UTF-8",nil,function(code,content,cookie,header)
+  if code==200 and content then
+    content=content:gsub("%s$","")
+    if content:find("status: success") then
+      local city=(string.gsub(tostring(content:match("city_name: [^\n]+")),"^.+: ","")or"异界")
+      local wtrp=string.gsub(tostring(content:match("weather: [^\n]+")),"^.+: ","")or"未知"
+      local wtrd=string.gsub(tostring(content:match("weather_description: [^\n]+")),"^.+: ","")or"暂无数据"
+      local temp=string.gsub(tostring(content:match("temperature: [^\n]+")),"^.+: ","")or"-273.15"
+      local windd=string.gsub(tostring(content:match("wind_direction: [^\n]+")),"^.+: ","")or"无风向"
+      local winds=string.gsub(tostring(content:match("wind_scale: [^\n]+")),"^.+: ","")or"未知风力"
+      local windsd=string.gsub(tostring(content:match("wind_scale_description: [^\n]+")),"^.+: ","")or"无风"
+      local hum=string.gsub(tostring(content:match("humidity: [^\n]+")),"^.+: ","")or"0"
+      local humd=string.gsub(tostring(content:match("humidity_description: [^\n]+")),"^.+: ","")or"爆表"
+      wtrtemp.text=temp
+      local wtricn={
+        ["晴"]=(function()
+          if(tonumber(os.date"%H")>18 or tonumber(os.date"%H")<6)then
+            return "night"
+          else
+            return "sunny"
+          end
+        end)(),
+        ["多云"]="partlycloudy",
+        ["阴"]="cloudy",
+        ["雷阵雨"]="lightning",
+        ["雷阵雨并伴有冰雹"]="hail",
+        ["阵雨"]="rainy",
+        ["小雨"]="rainy",
+        ["中雨"]="pouring",
+        ["大雨"]="pouring",
+        ["暴雨"]="pouring",
+        ["特大暴雨"]="pouring",
+        ["阵雪"]="snowy",
+        ["小雪"]="snowy",
+        ["中雪"]="snowy",
+        ["大雪"]="snowy",
+        ["雨夹雪"]="snowy",
+        ["雾"]="fog",
+        ["轻雾"]="fog",
+        ["霾"]="fog",
+        ["扬沙"]="fog",
+        ["浮尘"]="fog",
+        ["沙尘暴"]="fog",
+        ["冻雨"]="hail",
+        ["弱高吹雪"]="fog",
+        ["龙卷风"]="windy",
+        ["飑"]="windy_variant",
+      }
+      local wtricp="drawable/"..((wtricn[wtrp]and"weather_"..wtricn[wtrp])or"question_mark_circle.png")..".png"
+      wtricon.imageBitmap=loadbitmap(wtricp)
+      local udt=os.date("%H:%M")
+      wtrlay.onClick=function()
+        弹出消息(city.." "..wtrd.."\
+现在 "..wtrp.." "..temp.."℃\
+"..windd.." "..winds.." "..windsd.."\
+湿度 ".." "..hum.."% "..humd.."\
+更新于 "..udt)
+      end
+    else
+      弹出消息("无法获取天气信息\
+状态："..string.gsub(tostring(content:match("status: [^\n]+")),"^.+: ","").."\
+描述如下：\
+"..string.gsub(tostring(content:match("error_message: [^\n]+")),"^.+: ","").."\
+"..(string.gsub(tostring(content:match("error_note: [^\n]+")),"^.+: ","")or ""))
+    end
+  else
+    if code>0 then
+      弹出消息("天气信息请求失败 "..code)
+    else
+      弹出消息("网络或系统错误 "..code)
+    end
+  end
+end)]],[[]])
+
+sidebar2=(loadlayout(
+{
+LinearLayout;
+layout_width="fill";
+layout_height="fill";
+gravity="bottom";--center中间 bottom底部
+orientation="horizontal" ;--vertical竖 horizontal横
+
+ {
+        Button;
+        background="0x00000000";
+        textSize="18";
+        HintTextColor="0x00000000";
+        text="设置";
+layout_weight="1.0"; 
+layout_width="fill";--宽度
+layout_marginTop="fill";--边顶
+onClick=function()
+进入子页面("关于")
+end
+};
+
+  {
+        Button;
+        background="0x00000000";
+         gravity="center";
+        textSize="18";
+        HintTextColor="0x00000000";
+        text="退出";
+layout_weight="1.0"; 
+layout_width="fill";--宽度
+layout_marginTop="fill";--边顶
+onClick=function()
+  退出程序()
+end
+};
+  }
+))
+
+sidebar.addView(sidebar2)
+--关闭阴影
+drawerLayout.setScrimColor(0)
+--关闭阴影
+drawerLayout.setScrimColor(0)
+
+--添加背景
+drawerLayout.addView(loadlayout({
+  ImageView,
+  id="background",
+  scaleType="fitXY",
+  src="",
+}),0)
+
+--获取页面根布局
+local lay=drawerLayout.getChildAt(1)
+
+--监听侧滑滑动事件
+local pio=this.getWidth()*0.1
+drawerLayout.setDrawerListener(DrawerLayout.DrawerListener{
+  onDrawerSlide=function(v,i)
+  --  lay.setScaleX(1-i/3.5).setScaleY(1-i/3.5)--页面缩放
+  --注释掉上面这段即可改为简单的挤压挤压
+    lay.setTranslationX((({0,0,1,0,-1})[v.LayoutParams.gravity])*(i*6*pio))--页面位移(其中那段奇怪的表是用于判断位移方向，不过依然仅支持左右侧滑)
+    --上面这段的8为挤压屏幕的宽度
+  end})
+
+
+--程序启动时会执行的事件
+
+--需要注意:
+--使用此模块需遵守协议，保证文件中的版权内容可见
+--但 Fusion App 打包会将该模块文件进行加密
+--请您务必通过其它方式保证版权内容可见，否则即视为侵权
+--谢谢！
+
+--没什么..用于去掉返回键退出提示...
+
+
+--导入主题模块
+主题=require"theme"
+
+--新增主题
+table.insert(主题.配色,{
+  名称="寂静灰",
+  侧滑栏背景="#FF9E9E9E",
+  顶栏背景="#FFBDBDBD",
+  顶栏标题="#FF424242",
+  搜索栏提示文字="#FFAAAAAA",
+  顶栏="#FFBDBDBD",
+  底栏="#FFBDBDBD",
+  悬浮按钮="#FF424242",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="森林绿",
+  侧滑栏背景="#FFE8F5E9",
+  顶栏背景="#FF388E3C",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF388E3C",
+  底栏="#FF388E3C",
+  悬浮按钮="#FF2E7D32",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="青柠绿",
+  侧滑栏背景="#FFF9FBE7",
+  顶栏背景="#FFCDDC39",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FFCDDC39",
+  底栏="#FFCDDC39",
+  悬浮按钮="#FF827717",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="活力橙",
+  侧滑栏背景="#FFFFF3E0",
+  顶栏背景="#FFFF9800",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FFFF9800",
+  底栏="#FFFF9800",
+  悬浮按钮="#FFEF6C00",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="丛林棕",
+  侧滑栏背景="#FFEFEBE9",
+  顶栏背景="#FF795548",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF795548",
+  底栏="#FF795548",
+  悬浮按钮="#FF2E7D32",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="浅蓝灰",
+  侧滑栏背景="#FFECEFF1",
+  顶栏背景="#FF607D8B",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF607D8B",
+  底栏="#FF607D8B",
+  悬浮按钮="#FF455A64",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="水墨黑",
+  侧滑栏背景="#FFF0F5F9",
+  顶栏背景="#FF52616A",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF52616A",
+  底栏="#FF52616A",
+  悬浮按钮="#FF1E2022",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="青草绿",
+  侧滑栏背景="#FFF1F8E9",
+  顶栏背景="#FF8BC34A",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF8BC34A",
+  底栏="#FF8BC34A",
+  悬浮按钮="#FF558B2F",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="百度蓝",
+  侧滑栏背景="#FFFFFFFF",
+  顶栏背景="#FF2319DC",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF2319DC",
+  底栏="#FF2319DC",
+  悬浮按钮="#FFE10601",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="狗屎黄",
+  侧滑栏背景="#FFFFDE80",
+  顶栏背景="#FF795548",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF795548",
+  底栏="#FF795548",
+  悬浮按钮="#FF4E342E",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="原谅绿",
+  侧滑栏背景="#FFA5D6A7",
+  顶栏背景="#FF4CAF50",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF4CAF50",
+  底栏="#FF4CAF50",
+  悬浮按钮="#FF388E3C",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="闷骚蓝",
+  侧滑栏背景="#FFE8EAF6",
+  顶栏背景="#FF303F9F",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF303F9F",
+  底栏="#FF303F9F",
+  悬浮按钮="#FF1A237E",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="高级黑",
+  侧滑栏背景="#FF000000",
+  顶栏背景="#FF000000",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF000000",
+  底栏="#FF000000",
+  悬浮按钮="#FF000000",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="闷骚蓝",
+  侧滑栏背景="#FFE8EAF6",
+  顶栏背景="#FF303F9F",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF303F9F",
+  底栏="#FF303F9F",
+  悬浮按钮="#FF1A237E",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="基佬紫",
+  侧滑栏背景="#FFF3E5F5",
+  顶栏背景="#FF9C27B0",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF9C27B0",
+  底栏="#FF9C27B0",
+  悬浮按钮="#FF5E35B1",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="姨妈红",
+  侧滑栏背景="#FFFFEBEE",
+  顶栏背景="#FFE53935",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FFE53935",
+  底栏="#FFE53935",
+  悬浮按钮="#FFC62828",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="大叔粉",
+  侧滑栏背景="#FFFCE4EC",
+  顶栏背景="#FFF06292",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FFF06292",
+  底栏="#FFF06292",
+  悬浮按钮="#FFE91E63",
+  暗色=false,
+})
+table.insert(主题.配色,{
+  名称="寒歌灰",
+  侧滑栏背景="#FFFFFFFF",
+  顶栏背景="#FF2C2E43",
+  顶栏标题="#FFFFFFFF",
+  顶栏="#FF2C2E43",
+  底栏="#FF2C2E43",
+  悬浮按钮="#FF33A7AA",
+  暗色=false,
+})
+local function getRandomColor()
+  math.randomseed(os.clock()*1000000)
+  local r=string.format("%02X",math.random(0,255))
+  math.randomseed(os.clock()*1000000)
+  local g=string.format("%02X",math.random(0,255))
+  math.randomseed(os.clock()*1000000)
+  local b=string.format("%02X",math.random(0,255))
+  return "#FF"..r..g..b
+end
+getRandomColor()
+table.insert(主题.配色,{
+  名称="瞎眼彩",
+  侧滑栏背景=getRandomColor(),
+  顶栏背景=getRandomColor(),
+  顶栏标题=getRandomColor(),
+  顶栏=getRandomColor(),
+  底栏=getRandomColor(),
+  悬浮按钮=getRandomColor(),
+  暗色=false,
+})
+
+--恢复之前设置的主题(建议在新增主题后执行)
+主题.恢复()
+------
+-- 原作: Pretend° (dalao)
+-- 修改: QQ32552732
+-- 修改内容:
+--  - 支持 Fusion App 原有布局
+--  - 删除原有自定义布局等无用代码
+--  - 稍微修改了下效果，符合个人喜好...
+--  - 支持右侧栏
+
+
+--侧栏圆角
+function CircleButton(view,InsideColor,radiu)
+  import "android.graphics.drawable.GradientDrawable"
+  drawable = GradientDrawable() 
+  drawable.setShape(GradientDrawable.RECTANGLE) 
+  drawable.setColor(InsideColor)
+  drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});
+  view.setBackgroundDrawable(drawable)
+end
+角度=35--圆角弧度
+控件id=sidebar
+控件颜色=0xA1FFFFFF
+CircleButton(控件id,控件颜色,角度)
+linearParams = sidebar.getLayoutParams()
+linearParams.width =520--侧滑栏宽度
+local h=this.getHeight()--获得屏幕宽高
+linearParams.height =h-400--侧滑栏高度
+sidebar.setLayoutParams(linearParams)
+flt=sidebar.getLayoutParams( )
+flt.setMargins(0, 60,0,300)
+sidebar.setLayoutParams(flt)
+--上下左右
+
+
+
+
+
+
+
+Http.get("https://shimo.im/docs/v8J1prtz2bwxkiWt",nil,nil,nil,function(code,content)
+     if code==200 then
+      链接=content:match("【图片】(.-)【图片】")
+      链接一=content:match("【图】(.-)【图】")
+      链接四=content:match("【影视】(.-)【影视】")
+yl=
+{
+    LinearLayout;
+    layout_width="fill";
+    orientation="vertical";
+    layout_height="fill";
+    {
+        Button;
+        singleLine="true";
+        id="iw";
+        background=链接,
+        layout_width="100%w";
+        layout_margin="10";
+        layout_height="20%h";
+         onClick=function(v)
+   进入子页面("播放",{链接=链接四})
+end
+        };
+    {
+        Button;
+        singleLine="true";
+        id="iw";
+        background=链接一,
+        layout_width="100%w";
+        layout_margin="0";
+        layout_height="80%h";
+       
+        };   
+   
+    
+    };
+webView.addView(loadlayout(yl))
+else
+对话框()
+.设置标题("温馨提示:")
+.设置消息("\n应用连接服务器失败,请重新启动")
+.设置积极按钮("退出",function()
+ 退出程序()
+  显示消息("点击了确定")
+end)
+.显示()
+    end
+    end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
