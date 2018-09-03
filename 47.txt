@@ -1,0 +1,2899 @@
+--程序启动时会执行的事件
+对话框()
+.设置标题("作者:观天下")
+.设置消息("这样布局需要自己添加图片资源和影视资源，很麻烦费时间的，我这只提供模版和参考，有需求可以修改使用")
+.设置积极按钮("确定",function()
+  显示消息("点击了确定")
+end)
+.设置消极按钮("取消")
+.显示()
+--观天下制做
+toolbar.parent.setVisibility(View.GONE)
+yuxuan={
+  LinearLayout,
+  orientation="vertical",
+  layout_width="match_parent";
+  layout_height="match_parent";
+  
+  {ScrollView,
+    layout_width="match_parent";
+    layout_height="match_parent";
+    --gravity="bottom";
+    
+  
+ {
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+--layout_weight="1.0";
+gravity="bottom";
+       {	LinearLayout;
+		layout_height="200dp";
+		layout_width="match_parent";
+		orientation="vertical";
+  layout_margin="13.5dp";
+  {
+   CardView;
+   layout_margin="0.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+  {
+    PageView,
+    id="pg1";
+    layout_width="fill",
+    layout_height="fill",
+    pages={
+      {
+        LinearLayout;
+        id="for11";
+        --background="#0085FF",
+        orientation="vertical";
+        {
+          ImageView;
+          layout_width="fill",
+          layout_height="fill",
+          scaleType="fitXY";
+       src="http://puui.qpic.cn/tv/0/33263132_1080607/0";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://puui.qpic.cn/tv/0/33263132_1080607/0";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+进入子页面("播放",{链接="http://video.qzone.qq.com/1006_0f51718a65394af29d8362b6d9801515.f20.mp4?vkey=99184808663847092505804513452226599310348022082068660333575276921981607419427510385377649490074536522624231310908663673652474651462183514127877750866102936543816281394922639557252795923523717681450188901526685559778482178141890289566087738393226190856341569465725647542942308359494020692992031432154635857516585361822218479785324651465457028672293066874147121208829249313059283249922891332482404169449491689225456683186864044195605947336241297964437101879765885080254269098219224335843034331220356000057455892607300095281632387545178746463543568691801300920873339413932107251689112421113747362379987098933098643205770871205696770998861354229511367390297927195112948163952438303833814690602152080972941372656229202208790484826249282573962220630120333218654785407469716133679846792598650906401632489445050191606671267675304020645048915632856166300545044259922564693376419993394503456211547581836953523746318450959819469041198"})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+          
+          
+        };
+      };
+      {
+        LinearLayout;
+        id="for12";
+       -- background="#FF006E",
+        orientation="vertical";
+        {
+          ImageView;
+          layout_width="fill",
+          layout_height="fill",
+          scaleType="fitXY";
+          src="http://puui.qpic.cn/tv/0/33079892_1080607/0";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://puui.qpic.cn/tv/0/33079892_1080607/0";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          加载网页("http://video.qzone.qq.com/1006_0f51718a65394af29d8362b6d9801515.f20.mp4?vkey=9918480866384709250580451345222659931034802208206866033357527692198160741942751038537764949007453652262423131090866367365247465146218351412787775086610293654381628139492263955725279592352371768145018890152668555977848217814189028956608773839322619085634156946572564754294230835949402069299203143215463585751658536182221847978532465146545702867229306687414712120882924931305928324992289133248240416944949168922545668318686404419560594733624129796443710187976588508025426909821922433584303433122035600005745589260730009528163238754517874646354356869180130092087333941393210725168911242111374736237998709893309864320577087120569677099886135422951136739029792719511294816395243830383381469060215208097294137265622920220879048482624928257396222063012033321865478540746971613367984679259865090640163248944505019160667126767530402064504891563285616630054504425992256469337641999339450345621154758183695352374631845095981946904119813530713991476928504345318261286192052790370347920827821554376353505092565847296581125013460868980781779786894978090592202575929948477968064533239098946211180402531428144016027037400709521248429279152620086697061801897478229716152910401545085187719598164456942937046158796033989163180193473658891927082922394398253862867276982798058366228484698792988778111491468610160132679401583602102750350138500411847968087830382743518319157405528275261478950934129732248111855382017220560200536233145173770969744189164436405332731660531808923143022571052687981202353303726654467313202383928219466778563963640927096795960302121082440388846821678820530268655012013961208909968618277634245515674946876933632639844577116491430853671936811256876309669688310229319241473768327739884682355882666096272765273119060454179551634744574640937209140236320807633349542027198389782185774256619993060463755184361291536920974780418615539573942203969295819478686151711291018960423954293362557431494171611769478924020660560085640719421724443735567919046930274693678056185722901598649072109074834104553593577")
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+      };
+      {
+        LinearLayout;
+        id="for13";
+        --background="#009E89",
+        orientation="vertical";
+       {
+          ImageView;
+          layout_width="fill",
+          layout_height="fill",
+          scaleType="fitXY";
+        src="http://i.gtimg.cn/qqlive/img/jpgcache/files/qqvideo/hori/s/sqmkhre9cpq6t2y_big.jpg";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://i.gtimg.cn/qqlive/img/jpgcache/files/qqvideo/hori/s/sqmkhre9cpq6t2y_big.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+          
+        };
+      };
+   
+      {
+        LinearLayout;
+        id="for14";
+      --  background="#FF5000",
+        orientation="vertical";
+        {
+          ImageView;
+          layout_width="fill",
+          layout_height="fill",
+          scaleType="fitXY";
+         src="http://puui.qpic.cn/tv/0/33233747_498280/0";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://puui.qpic.cn/tv/0/33233747_498280/0";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+          
+        };
+      };
+  };
+};
+      
+};
+ };
+ {
+        LinearLayout;
+    layout_width="match_parent";
+    
+	layout_height="match_parent";
+--	gravity="center";
+	orientation="horizontal";
+  layout_margin="10dp",
+        
+  {
+    CardView;
+   layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-16/201808161534421441.jpg";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-16/201808161534421441.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="http://youku163.zuida-bofang.com/20180816/11949_e96f71e9/index.m3u8"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+{
+    CardView;
+    layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-14/201808141534255854.jpg";
+          
+         onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-14/201808141534255854.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="http://fuli.zuida-youku-le.com/20180814/31713_cb0f5b51/index.m3u8"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+       } ;
+    {
+        LinearLayout;
+    layout_width="match_parent";
+    
+	layout_height="match_parent";
+--	gravity="center";
+	orientation="horizontal";
+  layout_margin="10dp",
+        
+  {
+    CardView;
+   layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-02/201808021533220637.jpg";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-02/201808021533220637.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+{
+    CardView;
+    layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-31/201808311535711020.jpg";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-31/201808311535711020.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+       } ;
+    {
+        LinearLayout;
+    layout_width="match_parent";
+    
+	layout_height="match_parent";
+--	gravity="center";
+	orientation="horizontal";
+  layout_margin="10dp",
+        
+  {
+    CardView;
+   layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-09/201808091533776567.jpg";
+         onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-09/201808091533776567.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+  
+{
+    CardView;
+    layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-07/201808071533647965.jpg";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-07/201808071533647965.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+       } ;
+     
+     
+     --起点
+{
+        LinearLayout;
+    layout_width="match_parent";
+    
+	layout_height="match_parent";
+--	gravity="center";
+	orientation="horizontal";
+  layout_margin="10dp",
+        {
+    CardView;
+   layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-14/201808141534251688.jpg";
+          
+        
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-08-14/201808141534251688.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+
+{
+    CardView;
+    layout_margin="4.5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="45%w"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="35%h";
+    radius="3dp";
+    
+            {
+              ImageView;
+              layout_width="match_parent";
+      layout_height="match_parent";
+            scaleType="fitXY"; 
+            src="http://tupian.tupianzy.com/pic/upload/vod/2018-07-09/201807091531101303.jpg";
+          
+          onClick=function()
+            
+layout=
+{
+LinearLayout,
+layout_width="match_parent",
+layout_height="match_parent",
+gravity="center",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+{
+LinearLayout,
+layout_height="match_parent",
+layout_width="match_parent",
+orientation="vertical",
+  gravity="center";
+{
+  TextView;
+  text="电视剧名称";
+  gravity="center";
+  textSize="20sp";
+  },
+},
+{
+LinearLayout,
+layout_height="200dp",
+layout_width="match_parent",
+orientation="horizontal",
+  {
+   CardView;
+   layout_margin="5dp",
+    elevation="1.5dp";
+    id="kppp1";
+    layout_width="match_parent"; 
+    CardBackgroundColor="#ffffff";
+    layout_height="match_parent";
+    radius="3dp";
+{
+ImageView,
+layout_height="match_parent",
+layout_width="match_parent",
+src="http://tupian.tupianzy.com/pic/upload/vod/2018-07-09/201807091531101303.jpg";
+ scaleType="fitXY";         
+--text="Text",
+--layout_margin="10dp"
+},
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第1集",
+layout_weight="1",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第2集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第3集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第4集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第5集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第6集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第7集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第8集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+{
+LinearLayout,
+layout_height="50dp",
+layout_width="match_parent",
+orientation="horizontal",
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第9集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第10集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第11集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+{
+Button,
+layout_height="wrap_content",
+layout_width="wrap_content",
+text="第12集",
+layout_weight="1.0",
+onClick=function()
+          videoPath="空格空间"
+          activity.newActivity("XluaView",{videoPath})
+          end  
+},
+},
+},
+}
+local dl=AlertDialog.Builder(activity)
+--.setTitle("自定义布局对话框")
+.setView(loadlayout(layout))
+dl.show()
+          end  
+        };
+   
+};
+       } ;
+     
+     
+     --终点
+        };
+      };
+  
+}
+webView.addView(loadlayout(yuxuan))
+
+ --滚动
+  
+  
+ 
+for11.onClick=function()
+  pg1.showPage(0)
+end
+for12.onClick=function()
+  pg1.showPage(1)
+end
+for13.onClick=function()
+  pg1.showPage(2)
+end
+
+for14.onClick=function()
+  pg1.showPage(4)
+end
+--[[for18.onClick=function()
+  pg.showPage(0)
+end[[]]
+
+local n=0 
+function images() 
+  task(2000,function() 
+    n=n+1 pg1.showPage(n%4)
+    images() 
+  end)
+end 
+images();
+
+--[[
+scp=function(asf)
+  Thread.sleep(4)
+  pg1.showPage(asf)
+end
+[[]]
+
+aer=true
+bt=0
+
+
+import"lb"
+
+--import "jiemian2"
+pg1.addOnPageChangeListener{
+ -- onPageScrolled=function(a,b,c)
+    --在被滑动的时候不断调用
+     --print(a,b,c)
+  -- .setTranslationX(activity.getWidth()*0.5*(b+a))
+  --end,
+  
+  
+  onPageSelected=function(page)
+    
+    bt=page
+ end,
+  onPageScrollStateChanged=function(state)
+    
+    --监听操作状态 有0,1,2
+    --print(state)
+  end,
+}
